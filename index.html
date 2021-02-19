@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bangladesh Agricultural Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+      body {
+        font-family: Oswald;
+      }
+
+      .thumbnail {
+        padding: 10px;
+        height: 50px;
+        min-width: 200px;
+        /* border: 1px solid; */
+        display: block;
+        /* position: absolute; */
+        /* font-weight: bold; */
+        box-shadow:inset 0 0 0 2000px rgba(176, 176, 176, 0.3);
+        /* text-shadow: 1px 1px #424242; */
+        /* color: #ffff29; */
+        color: #1b97cc;
+      }
+
+      iframe {
+        border: 0px;
+        overflow:hidden;
+      }
+
+      #header h1 {
+        color: #3686ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row p-1" id="header">
+        <h1>Impact of Coronavirus on Livelihoods</h1>
+      </div>
+      <div class="row px-1">
+        <p>Interactive maps from February to April, 2020.</p>
+      </div>
+      <hr>
+      <div class="row">
+        <div id="inner-left" class="col-sm-3">
+          <a href="#"
+           onClick="document.getElementById('graph').src = 'https://infernobd.com/css/feb.html';">
+            <div class="thumbnail" id="feb">
+              February
+            </div>
+          </a>
+          <a href="#"
+           onClick="document.getElementById('graph').src = 'https://infernobd.com/css/mar.html';">
+            <div class="thumbnail" id="mar">
+              March
+            </div>
+          </a>
+          <a href="#"
+           onClick="document.getElementById('graph').src = 'https://infernobd.com/css/apr.html';">
+            <div class="thumbnail" id="apr">
+              April
+            </div>
+          </a>
+        </div>
+        <div id="inner-right"  class="col-sm-9">
+          <iframe src="https://infernobd.com/css/feb.html" id="graph" width="800px" height="500px"
+           seemless="seemless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <iframe src="https://infernobd.com/css/bar.html" id="barchart" width="100%" height="500px"
+         seemless="seemless" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+      </div>
+      <hr>
+      <div class="row p-2" id="footer">
+        <small>
+          Data Source: <a href="https://www.lightcastlebd.com/insights/2020/05/impact-of-coronavirus-on-livelihoods-rural-and-low-income-population-of-bangladesh-2">
+          LightCastle Partners
+          </a>
+        </small>
+      </div>
+    </div>
+  </body>
+</html>
